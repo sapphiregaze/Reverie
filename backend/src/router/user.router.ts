@@ -16,7 +16,7 @@ UserRouter.get("/", async (req: express.Request, res: express.Response) => {
 
     const id: number | null = await authenticate(token);
 
-    const user: any = await User.findOne({ where: { id: id } });
+    const user: any = await User.findByPk(id as number);
     const dreams: any = await Dream.findAll({ where: { user_id: id } });
 
     res.status(200).json({
@@ -35,7 +35,7 @@ UserRouter.get("/:id", async (req: express.Request, res: express.Response) => {
   try {
     const id: number = Number(req.params.id);
 
-    const user: any = await User.findOne({ where: { id: id } });
+    const user: any = await User.findByPk(id as number);
     const dreams: any = await Dream.findAll({ where: { user_id: id } });
 
     res.status(200).json({
