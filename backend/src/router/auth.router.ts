@@ -30,6 +30,7 @@ AuthRouter.post(
       const { username, password } = req.body;
 
       const token: string = await login(username, password);
+
       res.status(200).json({ token: token });
     } catch (err) {
       res.status(501).json({ message: (err as Error).message });
