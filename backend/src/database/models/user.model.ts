@@ -28,6 +28,11 @@ const User = sequelize.define("Users", {
     allowNull: false,
     defaultValue: 0,
   },
+  streak: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: 0,
+  },
 });
 
 sequelize
