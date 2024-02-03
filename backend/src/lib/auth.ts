@@ -4,8 +4,6 @@ import validator from "validator";
 
 import User from "../database/models/user.model";
 
-import { IUser } from "./types";
-
 require("dotenv").config();
 const secret: string = process.env.JWT_SECRET as string;
 
