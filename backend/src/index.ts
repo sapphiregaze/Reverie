@@ -5,6 +5,7 @@ import sequelize from "./database/connection";
 import AuthRouter from "./router/auth.router";
 import TaskRouter from "./router/task.router";
 import UserRouter from "./router/user.router";
+import UploadRouter from "./router/upload.router";
 
 require("dotenv").config();
 const port: number = Number(process.env.PORT) || 8000;
@@ -27,6 +28,7 @@ app.use((req: express.Request, res: express.Response, next: NextFunction) => {
 app.use("/api/auth", AuthRouter);
 app.use("/api/task", TaskRouter);
 app.use("/api/user", UserRouter);
+app.use("/api/upload", UploadRouter);
 
 app.listen(port, () => {
   console.log(`Reverie backend is now listening on port ${port}`);
