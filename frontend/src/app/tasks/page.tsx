@@ -12,7 +12,7 @@ export default function TasksPage() {
         const tasks: string[] = await getTasks();
         setTasks(tasks);
       } catch (err) {
-        console.error("Error fetching recipes:", err);
+        console.error("Error fetching tasks:", err);
         return (
           <p className="text-center text-2xl">
             Error loading tasks. Please try again later.

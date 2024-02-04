@@ -16,6 +16,24 @@ export const getTasks = async (): Promise<string[]> => {
   return data;
 };
 
+export const getProfile = async (token: string) => {
+  const response: Response = await fetch(`${host}/api/user`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (!response.ok) {
+    const error: ErrorMessage = await response.json();
+    throw new Error(`Failed to fetch data: ${error.error}`);
+  }
+
+  const data = await response.json();
+
+  return data;
+};
+
 export const login = async (
   username: string,
   password: string,
