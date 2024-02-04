@@ -30,14 +30,7 @@ app.use("/api/task", TaskRouter);
 app.use("/api/user", UserRouter);
 app.use("/api/upload", UploadRouter);
 
-app.listen(port, () => {
+app.listen(port, async () => {
+  await sequelize.sync();
   console.log(`Reverie backend is now listening on port ${port}`);
-  sequelize
-    .authenticate()
-    .then(() => {
-      console.log("Connection has been established successfully.");
-    })
-    .catch((err) => {
-      console.log("Unable to connect to the database:", err);
-    });
 });

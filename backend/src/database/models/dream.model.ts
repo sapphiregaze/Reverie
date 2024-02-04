@@ -23,13 +23,4 @@ const Dream = sequelize.define("Dreams", {
   },
 });
 
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Database synchronized.");
-  })
-  .catch((err) => {
-    console.error("Error synchronizing database:", err);
-  });
-
 export default Dream;

@@ -35,13 +35,4 @@ const User = sequelize.define("Users", {
   },
 });
 
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Database synchronized.");
-  })
-  .catch((err) => {
-    console.error("Error synchronizing database:", err);
-  });
-
 export default User;
