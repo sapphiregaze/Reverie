@@ -5,36 +5,36 @@ const LoginScreen = ({ navigation }) => {
   return (
     <View className="flex-1 bg-[#FCFAF6] p-12">
       <Pressable
-        className="mt-6 -ml-4"
+        className="-ml-4 mt-6"
         onPress={() => navigation.navigate("Landing")}
       >
-        <Text className="text-xl text-gray-900 font-semibold">
+        <Text className="text-xl font-semibold text-gray-900">
           <Icon name="back" size={24} color="#111827" />
           &nbsp;Go Back
         </Text>
       </Pressable>
       <View className="flex flex-col items-center justify-center">
-        <Text className="text-3xl text-center font-semibold mt-32 mb-8">
+        <Text className="mb-8 mt-32 text-center text-3xl font-semibold">
           Login
         </Text>
-        <View className="w-full mb-6">
-          <Text className="ml-2 font-semibold my-2">Username</Text>
+        <View className="mb-6 w-full">
+          <Text className="my-2 ml-2 font-semibold">Username</Text>
           <TextInput
-            className="bg-gray-200 rounded-3xl w-full p-4 shadow-2xl mb-2"
+            className="mb-2 w-full rounded-3xl bg-gray-200 p-4 shadow-2xl"
             placeholder="Enter your username"
           />
-          <Text className="ml-2 font-semibold my-2">Password</Text>
+          <Text className="my-2 ml-2 font-semibold">Password</Text>
           <TextInput
-            className="bg-gray-200 rounded-3xl w-full p-4 shadow-2xl mb-2"
+            className="mb-2 w-full rounded-3xl bg-gray-200 p-4 shadow-2xl"
             placeholder="Enter your password"
             secureTextEntry={true}
           />
         </View>
         <Pressable
-          className="m-2 bg-[#FCFAF6] w-full rounded-3xl p-2 border-[#6E4AFF] border-2"
+          className="m-2 w-full rounded-3xl border-2 border-[#6E4AFF] bg-[#FCFAF6] p-2"
           onPress={() => navigation.navigate("Login")}
         >
-          <Text className="text-xl font-semibold text-center text-[#6E4AFF]">
+          <Text className="text-center text-xl font-semibold text-[#6E4AFF]">
             Login
           </Text>
         </Pressable>
