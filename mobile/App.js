@@ -13,6 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
+          animation: "none",
           headerShown: false,
         }}
       >

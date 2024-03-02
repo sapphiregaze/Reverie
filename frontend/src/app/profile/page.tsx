@@ -30,9 +30,9 @@ export default function ProfilePage() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-start p-12 text-3xl text-black">
-        <div>{profile.username}</div>
-        <div>{profile.noctara_points}</div>
-        <div>{profile.streaks}</div>
+        <div>Username: {profile.username}</div>
+        <div>Noctara Points: {profile.noctara_points}</div>
+        <div>Streaks: {profile.streaks}</div>
         {profile.dreams?.map((dream: any, index: number) => (
           <div key={index}>{dream}</div>
         ))}
