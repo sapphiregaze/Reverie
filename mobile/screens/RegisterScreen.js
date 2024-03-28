@@ -9,7 +9,7 @@ const RegisterScreen = ({ navigation }) => {
         onPress={() => navigation.navigate("Landing")}
       >
         <Text className="text-xl font-semibold text-gray-900">
-          <Icon name="back" size={24} color="#111827" />
+          <Icon name="arrowleft" size={20} color="#111827" />
           &nbsp;Go Back
         </Text>
       </Pressable>
